@@ -1,0 +1,83 @@
+ligne de commande 
+
+Microsoft Windows [version 10.0.17763.3346]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\ahubertballo2023>d:
+
+D:\>cd WAMP64/www/association
+
+D:\WAMP64\www\association>git init
+Initialized empty Git repository in D:/WAMP64/www/association/.git/
+
+D:\WAMP64\www\association>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+D:\WAMP64\www\association>git add .
+
+D:\WAMP64\www\association>
+D:\WAMP64\www\association>git commit -m "Ajout de fichiers et dossiers initiaux"
+[master (root-commit) 93f8200] Ajout de fichiers et dossiers initiaux
+ Committer: Armelina HUBERT-BALLO <ahubertballo2023@campus-eni.fr>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 22 files changed, 882 insertions(+)
+ create mode 100644 classes/database.php
+ create mode 100644 classes/tresorerie.php
+ create mode 100644 index.php
+ create mode 100644 layout/footer.php
+ create mode 100644 layout/get_template.php
+ create mode 100644 layout/head.php
+ create mode 100644 layout/menu.php
+ create mode 100644 layout/style.css
+ create mode 100644 pages/404/404.php
+ create mode 100644 pages/bilan/bilan.php
+ create mode 100644 pages/bilan_detaille/bilan_detaille.php
+ create mode 100644 pages/cpt_resultat/cpt_resultat.php
+ create mode 100644 pages/cpt_resultat_detaille/cpt_resultat_detaille.php
+ create mode 100644 pages/home/home.php
+ create mode 100644 pages/journal/journal.php
+ create mode 100644 pages/login/action.php
+ create mode 100644 pages/login/login.php
+ create mode 100644 pages/logout/logout.php
+ create mode 100644 pages/membre/api_create.php
+ create mode 100644 pages/membre/api_membre.php
+ create mode 100644 pages/membre/create.php
+ create mode 100644 pages/membre/membre.php
+
+D:\WAMP64\www\association>git remote add origin https://github.com/Armelina-hb/tresorerie.git
+
+D:\WAMP64\www\association>git push -u origin master
+info: please complete authentication in your browser...
+
+D:\WAMP64\www\association>git push -u origin master
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (33/33), 10.72 KiB | 2.14 MiB/s, done.
+Total 33 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Armelina-hb/tresorerie/pull/new/master
+remote:
+To https://github.com/Armelina-hb/tresorerie.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\WAMP64\www\association>code .
+
+D:\WAMP64\www\association>
