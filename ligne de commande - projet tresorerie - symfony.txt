@@ -1,0 +1,178 @@
+Microsoft Windows [version 10.0.17763.3346]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\ahubertballo2023>d:
+
+D:\>cd DEV
+
+D:\DEV>php -v
+PHP 8.2.0 (cli) (built: Dec  6 2022 15:31:23) (ZTS Visual C++ 2019 x64)
+Copyright (c) The PHP Group
+Zend Engine v4.2.0, Copyright (c) Zend Technologies
+    with Zend OPcache v8.2.0, Copyright (c), by Zend Technologies
+    with Xdebug v3.2.0RC1, Copyright (c) 2002-2022, by Derick Rethans
+
+D:\DEV>symfony -v
+Symfony CLI version 5.8.6 (c) 2021-2024 Fabien Potencier (2024-01-30T13:12:32Z - stable)
+Symfony CLI helps developers manage projects, from local code to remote infrastructure
+
+These are common commands used in various situations:
+
+Work on a project locally
+
+  new                                                            Create a new Symfony project
+  server:start                                                   Run a local web server
+  server:stop                                                    Stop the local web server
+  security:check                                                 Check security issues in project dependencies
+  composer                                                       Runs Composer without memory limit
+  console                                                        Runs the Symfony Console (bin/console) for current project
+  php, pecl, pear, php-fpm, php-cgi, php-config, phpdbg, phpize  Runs the named binary using the configured PHP version
+
+Manage a project on Cloud
+
+  init                Initialize a new project using templates
+  cloud:domains       Get a list of all domains
+  cloud:branch        Branch an environment
+  cloud:environments  Get a list of environments
+  cloud:push          Push code to an environment
+  cloud:ssh           SSH to the current environment
+  cloud:projects      Get a list of all active projects
+  cloud:tunnel:open   Open SSH tunnels to an app's relationships
+  cloud:user:add      Add a user to the project
+  cloud:variables     List variables
+
+Show all commands with symfony.exe help,
+Get help for a specific command with symfony.exe help COMMAND.
+
+D:\DEV>composer -v
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 2.6.6 2023-12-08 18:32:26
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi|--no-ansi           Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+      --no-scripts               Skips the execution of all scripts defined in composer.json file.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+      --no-cache                 Prevent use of the cache
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                Shows a short information about Composer
+  archive              Creates an archive of this composer package
+  audit                Checks for security vulnerability advisories for installed packages
+  browse               [home] Opens the package's repository URL or homepage in your browser
+  bump                 Increases the lower limit of your composer.json requirements to the currently installed versions
+  check-platform-reqs  Check that platform requirements are satisfied
+  clear-cache          [clearcache|cc] Clears composer's internal package cache
+  completion           Dump the shell completion script
+  config               Sets config options
+  create-project       Creates new project from a package into given directory
+  depends              [why] Shows which packages cause the given package to be installed
+  diagnose             Diagnoses the system to identify common errors
+  dump-autoload        [dumpautoload] Dumps the autoloader
+  exec                 Executes a vendored binary/script
+  fund                 Discover how to help fund the maintenance of your dependencies
+  global               Allows running commands in the global composer dir ($COMPOSER_HOME)
+  help                 Display help for a command
+  init                 Creates a basic composer.json file in current directory
+  install              [i] Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json
+  licenses             Shows information about licenses of dependencies
+  list                 List commands
+  outdated             Shows a list of installed packages that have updates available, including their latest version
+  prohibits            [why-not] Shows which packages prevent the given package from being installed
+  reinstall            Uninstalls and reinstalls the given package names
+  remove               [rm] Removes a package from the require or require-dev
+  require              [r] Adds required packages to your composer.json and installs them
+  run-script           [run] Runs the scripts defined in composer.json
+  search               Searches for packages
+  self-update          [selfupdate] Updates composer.phar to the latest version
+  show                 [info] Shows information about packages
+  status               Shows a list of locally modified packages
+  suggests             Shows package suggestions
+  update               [u|upgrade] Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file
+  validate             Validates a composer.json and composer.lock
+
+D:\DEV>symfony new Tresorerie --webapp
+* Creating a new Symfony project with Composer
+  (running C:\ProgramData\ComposerSetup\bin\composer.phar create-project symfony/skeleton D:\DEV\Tresorerie  --no-interaction)
+
+* Setting up the project under Git version control
+  (running git init D:\DEV\Tresorerie)
+
+  (running C:\ProgramData\ComposerSetup\bin\composer.phar require webapp --no-interaction)
+
+                                                                                                         
+ [OK] Your project is now ready in D:\DEV\Tresorerie                                                     
+                                                                                                         
+
+
+D:\DEV>cd tresorerie
+
+D:\DEV\Tresorerie>git init
+Reinitialized existing Git repository in D:/DEV/Tresorerie/.git/
+
+D:\DEV\Tresorerie>git add .
+
+D:\DEV\Tresorerie>git commit -m "Ajout de fichiers et dossiers initiaux"
+[master af43f45] Ajout de fichiers et dossiers initiaux
+ 5 files changed, 43 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/Tresorerie.iml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/php.xml
+ create mode 100644 .idea/vcs.xml
+
+D:\DEV\Tresorerie>git remote add origin https://github.com/Armelina-hb/tresorerie.git
+
+D:\DEV\Tresorerie>git push -u origin master2
+error: src refspec master2 does not match any
+error: failed to push some refs to 'https://github.com/Armelina-hb/tresorerie.git'
+
+D:\DEV\Tresorerie>git push -u origin master
+To https://github.com/Armelina-hb/tresorerie.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Armelina-hb/tresorerie.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\DEV\Tresorerie>git push -u origin work
+error: src refspec work does not match any
+error: failed to push some refs to 'https://github.com/Armelina-hb/tresorerie.git'
+
+D:\DEV\Tresorerie>git push -u origin master
+Enumerating objects: 80, done.
+Counting objects: 100% (80/80), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (70/70), done.
+Writing objects: 100% (80/80), 48.16 KiB | 2.83 MiB/s, done.
+Total 80 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Armelina-hb/tresorerie/pull/new/master
+remote:
+To https://github.com/Armelina-hb/tresorerie.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\DEV\Tresorerie>phpstorm64 .
+'phpstorm64' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+D:\DEV\Tresorerie>
