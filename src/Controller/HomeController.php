@@ -19,7 +19,3 @@ class HomeController extends AbstractController
 
 
 }
-
-D:\DEV\Tresorerie>    git config --global user.name "Armelina HUBERT-BALLO"
-
-D:\DEV\Tresorerie>    git config --global user.email ahubertballo2023@campus-eni.fr
