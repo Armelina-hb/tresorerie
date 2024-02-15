@@ -1,5 +1,5 @@
 Microsoft Windows [version 10.0.17763.3346]
-(c) 2018 Microsoft Corporation. Tous droits réservés.
+(c) 2018 Microsoft Corporation. Tous droits rÃ©servÃ©s.
 
 C:\Users\ahubertballo2023>d:
 
@@ -172,7 +172,71 @@ To https://github.com/Armelina-hb/tresorerie.git
 branch 'master' set up to track 'origin/master'.
 
 D:\DEV\Tresorerie>phpstorm64 .
-'phpstorm64' n’est pas reconnu en tant que commande interne
-ou externe, un programme exécutable ou un fichier de commandes.
+'phpstorm64' nÂ’est pas reconnu en tant que commande interne
+ou externe, un programme exÃ©cutable ou un fichier de commandes.
 
 D:\DEV\Tresorerie>
+
+-----------
+LIGNE DE COMMANDE PHPSTORM :
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Tous droits rÃ©servÃ©s.
+
+ 
+                                                                                                                        
+ [OK] Package "bootstrap/dist/css/bootstrap.min.css" added to importmap.php.                                            
+                                                                                                                        
+      Use the new package normally by importing "bootstrap/dist/css/bootstrap.min.css".                                 
+
+
+
+ [OK] 2 new items (bootstrap/dist/js/bootstrap.min.js, @popperjs/core) added to the importmap.php!
+
+
+PS D:\DEV\Tresorerie> git push
+Everything up-to-date
+PS D:\DEV\Tresorerie> git status
+On branch master 
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/phpunit.xml 
+        new file:   public/.htaccess
+        new file:   src/Controller/HomeController.php
+        new file:   templates/home/index.html.twig
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .idea/php.xml
+        modified:   assets/app.js
+        modified:   composer.json
+        modified:   composer.lock
+        modified:   importmap.php
+        modified:   symfony.lock
+[master 7445fd1] Ajout de nouveaux fichiers et modifications
+ 4 files changed, 125 insertions(+)
+ create mode 100644 .idea/phpunit.xml
+ create mode 100644 public/.htaccess
+ create mode 100644 src/Controller/HomeController.php
+PS D:\DEV\Tresorerie> git add .idea/Tresorerie.iml .idea/php.xml assets/app.js composer.json composer.lock importmap.php sym
+fony.lock
+warning: in the working copy of 'composer.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'composer.lock', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'importmap.php', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'symfony.lock', LF will be replaced by CRLF the next time Git touches it
+PS D:\DEV\Tresorerie> git commit -m "Ajout de modifications non staged"
+[master 992cc5e] Ajout de modifications non staged
+ 7 files changed, 334 insertions(+), 2 deletions(-)
+PS D:\DEV\Tresorerie> git push
+Enumerating objects: 37, done. 
+Counting objects: 100% (37/37), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (23/23), 7.46 KiB | 2.49 MiB/s, done.
+Total 23 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 7 local objects.
+To https://github.com/Armelina-hb/tresorerie.git
+   af43f45..992cc5e  master -> master
+PS D:\DEV\Tresorerie>  
