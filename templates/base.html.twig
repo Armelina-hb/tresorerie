@@ -2,9 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="icon" href="{{ asset('img/icon.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Liste de Membres!{% endblock %}</title>
+{#    <link rel="icon" href="{{ asset('img/icon.png') }}">#}
     {% block stylesheets %}
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     {% endblock %}
 
     {% block javascripts %}
@@ -13,26 +18,52 @@
         {% endblock %}
     {% endblock %}
 </head>
-<body>
-<img src="{{ asset('img/logo.png') }}" />
+<body class="d-flex flex-column">
+{# entête du site #}
+
 {% for label, messages in app.flashes %}
     {% for message in messages %}
         <div class="alert alert-{{ label }}"> {{ message }} </div>
     {% endfor %}
 {% endfor %}
-<nav>
-    <ul style="display:flex; flex-direction: row;list-style: none;">
-        <li style="padding: 5px;"><a href="{{ path('app_home') }}">Membres</a></li>
-        <li style="padding: 5px;"><a href="{{ path('app_membres_create') }}">Ajouter un membre</a></li>
-        {% endif %}
-{#        {% if is_granted('IS_AUTHENTICATED') %}#}
-{#            <li style="padding: 5px;"><a href="{{ path('app_logout') }}">Deconnexion</a></li>#}
-{#        {% else %}#}
-{#            <li style="padding: 5px;"><a href="{{ path('app_login') }}">Se connecter</a></li>#}
-{#        {% endif %}#}
-    </ul>
-</nav>
 
-{% block body %}{% endblock %}
+<header>
+    <div class="container">
+        <h1 class="header-logo">
+            <a href="{{ path('app_home') }}" title="Go back to homepage">
+{#                <img src="{{ asset('img/logo.svg') }}" alt="Asso Logo">#}
+                Membres
+            </a>
+        </h1>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{{ path('app_home') }}" title="Go back to homepage">Home</a></li>
+        {#        <li style="padding: 5px;"><a href="{{ path('app_membres_create') }}">Ajouter un membre</a></li>#}
+        {#        {% if is_granted('IS_AUTHENTICATED') %}#}
+        {#            <li style="padding: 5px;"><a href="{{ path('app_logout') }}">Deconnexion</a></li>#}
+        {#        {% else %}#}
+        {#            <li style="padding: 5px;"><a href="{{ path('app_login') }}">Se connecter</a></li>#}
+        {#        {% endif %}#}
+            </ul>
+        </nav>
+    </div>
+</header>
+{# contenu principal de chaque page #}
+<main class="flex-grow-1">
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+</main>
+{# pied-de-page du site #}
+<footer>
+    <div class="container">
+        &copy; Membres {{ "now"|date("Y") }}
+    </div>
+</footer>
 </body>
 </html>
